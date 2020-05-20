@@ -3,6 +3,10 @@
 [![Build Status](https://travis-ci.com/milankl/ScaledArrays.jl.svg?branch=master)](https://travis-ci.com/milankl/ScaledArrays.jl)
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/milankl/ScaledArrays.jl?svg=true)](https://ci.appveyor.com/project/milankl/ScaledArrays-jl)
 
+Store both an Array `A` and a scale `s` together in a ScaledArray `SA = s*A`, such that for example `SA1*SA2 = (s1*s2)*A1*A2`. The arrays are supposed to have elements O(1), whereas the scale `s` is supposed to carry the magnitude.
+
+Use `unscale` to unscale `SA` (i.e. `s=1`) and `rescale` to change `s`.
+
 ### Example
 
 ```julia
